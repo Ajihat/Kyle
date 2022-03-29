@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steal The Look</title>
+    <style>
+        @font-face{font-family:'Univers LT W05_55 Roman';src:url("https://ccc-frontend.github.io/fonts/fonts/7b452431-e4a6-48a8-8ba1-c6300f9384df.woff2") format("woff2")}@font-face{font-family:Futura;src:url("https://ccc-frontend.github.io/fonts/fonts/Futura.ttc") format("truetype")}*{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0;margin:0;font-family:'Univers LT W05_55 Roman',sans-serif}.main{overflow:hidden}.header__inner{position:relative}.header__picture{width:100%}.header__motto{position:absolute;top:90px;left:45px;max-width:700px;color:#fff}.header__title{text-transform:uppercase;font-size:64px;line-height:98px;font-family:Futura,sans-serif;font-weight:400;margin-bottom:15px}.header__text{font-weight:400;font-size:18px;line-height:24px;margin-bottom:35px;padding-right:220px}.header__links{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:70%}.header__link{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#fff;font-family:Futura,sans-serif;font-size:20px;text-decoration:none;text-transform:uppercase}.header__link:hover .header__arrow{left:5px}.header__arrow,.header__person{display:block}.header__person{margin-right:10px}.header__arrow{position:relative;-webkit-transition:.2s;transition:.2s;left:0}.header__mobile-section{display:none}.header__mobile-text{max-width:500px;text-align:center;margin:30px auto 0 auto;font-size:13px;line-height:16px;padding:0 20px}@media (max-width:1650px){.header__title{font-size:45px;line-height:65px}.header__text{font-size:16px}}@media (max-width:1024px){.header__motto{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:5%}.header__title{font-size:45px;line-height:62px}.header__text{font-size:16px}}@media (max-width:764px){.header__motto{width:100%;top:initial;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:5%}.header__title{font-size:35px;line-height:45px;text-align:center;padding:0 15px}.header__text{display:none}.header__links{width:100%;-webkit-box-pack:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly}.header__link{font-size:13px}.header__arrow{width:12px}.header__person{margin-right:5px}.header__mobile-section{display:block}}@media (max-width:375px){.header__title{font-size:45px;line-height:55px}}.button{width:100%;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:'Univers LT W05_55 Roman'}.button__link{display:block;padding:15px 60px;font-size:12px;line-height:1.1;border-radius:0;border:1px solid #000;color:#fff!important;background-color:#000;text-transform:uppercase;text-decoration:none;margin:60px auto 0 auto;-webkit-transition:.2s;transition:.2s;cursor:pointer}.button__link:hover{background-color:#fff;color:#000!important}@media (max-width:764px){.button__link{font-size:10px;padding:12px 45px}}@media (max-width:764px){.button__link{padding:12px 30px}}.look{width:100%;max-width:1300px;margin:260px auto 0 auto}.look__container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-wrap:nowrap;flex-wrap:nowrap}.look__inner-img{width:48%}.look__main-img{display:block}.look__inner-scroll{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:52%}.look__title{-ms-flex-item-align:start;align-self:flex-start;width:100%;margin-left:6%}.look__header{height:54px;line-height:54px;font-size:22px;font-weight:400;font-family:Futura,sans-serif;text-transform:uppercase}.look__scroll{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%}.look__arrow-l,.look__arrow-r{position:relative;bottom:27px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:6%;height:300px;cursor:pointer}.look__arrow{width:40%}.look__carousel{width:88%;overflow-x:hidden;scroll-behavior:smooth}.look__items{width:1205px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.look__item{width:290px}.look__img{display:block;width:100%}.look__link{display:block}.look__head{-ms-flex-item-align:start;align-self:flex-start;margin-top:4px;font-size:10px;font-weight:400;text-transform:uppercase}.look__product{font-size:14px;font-weight:400;margin-top:3px}.look__price{font-size:14px;font-weight:400}.look__main-img{width:100%}@media (max-width:1024px){.look__items{width:925px}.look__item{width:220px}}@media (max-width:764px){.look{margin-top:140px}.look__container{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.look__inner-img{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1;width:100%}.look__scroll{padding-left:15px}.look__inner-scroll{width:100%;-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.look__title{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;margin-left:0;text-align:center}.look__arrow-l,.look__arrow-r{display:none}.look__carousel{width:100%;overflow-x:scroll}.look__carousel::-webkit-scrollbar{background:0 0;height:0}}.footer{margin-top:180px;margin-bottom:50px}.footer__title{font-family:Futura,sans-serif;text-align:center;font-size:40px;font-weight:400;text-transform:uppercase;margin-bottom:40px}.footer__container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.footer__inner{width:50%}.footer__pic{position:relative}.footer__img{width:100%}.footer__text{position:absolute;top:50%;left:50%;width:100%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.footer__text{color:#fff;font-size:45px;text-transform:uppercase;text-align:center;padding:0 15px}@media (max-width:1200px){.footer__text{font-size:30px}}@media (max-width:764px){.footer{margin-top:140px}.footer__title{font-size:32px}}@media (max-width:500px){.footer__text{font-size:22px}.footer__title{font-size:28px}}.carousel{margin-top:180px}.carousel__title{font-family:Futura,sans-serif;text-align:center;font-size:40px;font-weight:400;text-transform:uppercase;margin-bottom:40px}.carousel__arrows{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-right:20px;margin-bottom:10px}.carousel__arrow-l,.carousel__arrow-r{width:35px;display:block;cursor:pointer}.carousel__arrow-l{margin-right:10px}.carousel__main{padding-left:15px;width:auto;overflow:hidden}.carousel__main-inner{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;width:3645px}@media (max-width:1024px){.carousel__main-inner{width:2805px}}@media (max-width:764px){.carousel{margin-top:140px}.carousel__title{font-size:32px}.carousel__arrows{display:none}.carousel__main{overflow-x:scroll}.carousel__main::-webkit-scrollbar{background:0 0;height:0}}@media (max-width:500px){.carousel__title{font-size:28px}}
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="header__inner">
+                <img alt="header-picture" class="header__picture" id="header-img-desktop">
+                <div class="header__motto">
+                    <h1 class="header__title">KYLE MCLACHLAN</h1>
+                    <p class="header__text">Kyle MacLachlan zdobył rozgłos dzięki roli agenta FBI, Dale’a Coopera, w przełomowym serialu Davida Lyncha, „Miasteczko Twin Peaks”, która przyniosła mu dwie nominacje do nagrody Emmy i Złotego Globa w 1990 r. 27 lat później, MacLachlan powtórnie wcielił się w sławnego agenta w kontynuacji serialu, „Twin Peaks”, a za swoją rolę został nominowany do Złotego Globa w 2018 r.</p>
+                    <div class="header__links">
+                        <a href="" class="header__link">
+                            <span class="header__person">FINN WOLFHARD</span>
+                            <img src="images/arrow.svg" alt="arrow" class="header__arrow">
+                        </a>
+                        <a href="" class="header__link">
+                            <span class="header__person">AMBER VALLETTA</span>
+                            <img src="images/arrow.svg" alt="arrow" class="header__arrow">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mobile-section">
+                <p class="header__mobile-text">Kyle MacLachlan zdobył rozgłos dzięki roli agenta FBI, Dale’a Coopera, w przełomowym serialu Davida Lyncha, „Miasteczko Twin Peaks”, która przyniosła mu dwie nominacje do nagrody Emmy i Złotego Globa w 1990 r. 27 lat później, MacLachlan powtórnie wcielił się w sławnego agenta w kontynuacji serialu, „Twin Peaks”, a za swoją rolę został nominowany do Złotego Globa w 2018 r.</p>
+            </div>
+        </div>
+        <div class="button">
+            <a href="" class="button__link">Zobacz wszystkie produkty</a>
+        </div>
+        <div class="look">
+            <div class="look__container">
+                <picture class="look__inner-img">                   
+                    <source
+                        srcset="images/look1-img-mobile.jpg"
+                        media="(max-width: 764px)"
+                    />
+                    <img src="images/look1-img-desktop.jpg" alt="" class="look__main-img">
+                </picture>
+                <div class="look__inner-scroll">
+                    <div class="look__title">
+                        <h3 class="look__header">Look 01</h3>
+                    </div>
+                    <div class="look__scroll">
+                        <div class="look__arrow-l" style="visibility:hidden;">
+                            <img src="images/arrow-left-b.svg" alt="" class="look__arrow">
+                        </div>
+                        <div class="look__carousel">
+                            <div class="look__items">
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item1.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item2.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item3.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item4.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="look__arrow-r">
+                            <img src="images/arrow-right-b.svg" alt="" class="look__arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="look">
+            <div class="look__container">
+                <div class="look__inner-scroll">
+                    <div class="look__title">
+                        <h3 class="look__header">Look 02</h3>
+                    </div>
+                    <div class="look__scroll">
+                        <div class="look__arrow-l" style="visibility:hidden;">
+                            <img src="images/arrow-left-b.svg" alt="" class="look__arrow">
+                        </div>
+                        <div class="look__carousel">
+                            <div class="look__items">
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item5.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item6.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item7.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item8.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="look__arrow-r">
+                            <img src="images/arrow-right-b.svg" alt="" class="look__arrow">
+                        </div>
+                    </div>
+                </div>
+                <picture class="look__inner-img">
+                    <source
+                        srcset="images/look2-img-mobile.jpg"
+                        media="(max-width: 764px)"
+                    />
+                    <img src="images/look2-img-desktop.jpg" alt="" class="look__main-img">
+                </picture>
+            </div>
+        </div>
+        <div class="look">
+            <div class="look__container">
+                <picture class="look__inner-img">
+                    <source
+                        srcset="images/look3-img-mobile.jpg"
+                        media="(max-width: 764px)"
+                    />
+                    <img src="images/look3-img-desktop.jpg" alt="" class="look__main-img">
+                </picture>
+                <div class="look__inner-scroll">
+                    <div class="look__title">
+                        <h3 class="look__header">Look 03</h3>
+                    </div>
+                    <div class="look__scroll">
+                        <div class="look__arrow-l" style="visibility:hidden;">
+                            <img src="images/arrow-left-b.svg" alt="" class="look__arrow">
+                        </div>
+                        <div class="look__carousel">
+                            <div class="look__items">
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item9.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item10.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item11.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+                                <div class="look__item">
+                                    <a href="" class="look__link">
+                                        <img src="images/item12.jpg" alt="" class="look__img">
+                                    </a>
+                                    <div class="look__description">
+                                        <h4 class="look__head">Już wkrótce</h4>
+                                        <p class="look__product">Krótka sukienka z kokardką</p>
+                                        <p class="look__price">299,99 PLN</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="look__arrow-r">
+                            <img src="images/arrow-right-b.svg" alt="" class="look__arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel">
+            <h3 class="carousel__title">Zobacz wszystko</h3>
+            <div class="carousel__container">
+                <div class="carousel__main" id="carousel-big-main">
+                    <div class="carousel__main-inner" id="carousel-main-inner">
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item1.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item2.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item3.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item4.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item5.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item6.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item7.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item8.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item9.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item10.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item11.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>
+                        <div class="look__item">
+                            <a href="" class="look__link">
+                                <img src="images/item12.jpg" alt="" class="look__img">
+                            </a>
+                            <div class="look__description">
+                                <h4 class="look__head">Już wkrótce</h4>
+                                <p class="look__product">Krótka sukienka z kokardką</p>
+                                <p class="look__price">299,99 PLN</p>
+                            </div>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h3 class="footer__title">Steal the look</h3>
+            <div class="footer__container">
+                <div class="footer__inner">
+                    <div class="footer__pic">
+                        <img  alt="" class="footer__img" id="footerImg1">
+                        <p class="footer__text">FINN WOLFHARD</p>
+                    </div>
+                    <div class="button">
+                        <a href="" class="button__link">Zobacz wszystko</a>
+                    </div>
+                </div>
+                <div class="footer__inner">
+                    <div class="footer__pic">
+                        <img  alt="" class="footer__img" id="footerImg2">
+                        <p class="footer__text">AMBER VALLETTA</p>
+                    </div>
+                    <div class="button">
+                        <a href="" class="button__link">Zobacz wszystko</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            var headerImg = document.getElementById('header-img-desktop');
+            var footerImg1 = document.getElementById('footerImg1');
+            var footerImg2 = document.getElementById('footerImg2');
+            var arrowsRight = document.querySelectorAll('.look__arrow-r');
+            var arrowsLeft = document.querySelectorAll('.look__arrow-l');
+            var carouselBigMain = document.getElementById('carousel-big-main');
+            var carouselMainInner = document.getElementById('carousel-main-inner');
+            var scrollDistance = 0;
+            var scrollIntervalID;
+
+            var scrollIntervalID = setInterval(function () {
+                var carouselMainInnerWidth = carouselMainInner.offsetWidth
+                if (carouselBigMain.scrollLeft + carouselBigMain.offsetWidth >= carouselMainInnerWidth) {
+                    carouselBigMain.scrollBy(-carouselMainInnerWidth, 0);
+                    scrollDistance = 0;
+                }
+                carouselBigMain.scrollTo(scrollDistance, 0)
+                scrollDistance += 2;
+            }, 20);
+
+            carouselBigMain.addEventListener('mouseenter', function () {
+                clearInterval(scrollIntervalID);
+            })
+
+            carouselBigMain.addEventListener('mouseleave', function () {
+                scrollIntervalID = setInterval(function () {
+                    var carouselMainInnerWidth = carouselMainInner.offsetWidth
+                    if (carouselBigMain.scrollLeft + carouselBigMain.offsetWidth >= carouselMainInnerWidth) {
+                        carouselBigMain.scrollBy(-carouselMainInnerWidth, 0);
+                        scrollDistance = 0;
+                    }
+                    carouselBigMain.scrollTo(scrollDistance, 0)
+                    scrollDistance += 2;
+                }, 20);
+            })
+
+            if (window.innerWidth <= 764) {
+                headerImg.setAttribute('src', 'images/header-img-mobile.jpg');
+                footerImg1.setAttribute('src', 'images/finn-mobile.jpg');
+                footerImg2.setAttribute('src', 'images/amber-mobile.jpg');
+                clearInterval(scrollIntervalID);
+            } else {
+                headerImg.setAttribute('src', 'images/header-img-desktop.jpg');
+                footerImg1.setAttribute('src', 'images/finn-desktop.jpg');
+                footerImg2.setAttribute('src', 'images/amber-desktop.jpg');
+            }
+
+
+
+            arrowsRight.forEach(function (arrowRight) {
+                arrowRight.addEventListener('click', scrollRight)
+            });
+
+            arrowsLeft.forEach(function (arrowLeft) {
+                arrowLeft.addEventListener('click', scrollLeft)
+            });
+
+            function scrollRight() {
+                var carousel = this.previousElementSibling;
+                var arrowLeft = carousel.previousElementSibling;
+                var arrowRight = carousel.nextElementSibling;
+                var carouselChild = carousel.children[0]
+                var itemWidth = document.querySelector('.look__item').offsetWidth;
+                var distance = itemWidth + 16;
+                carousel.scrollBy(distance, 0);
+
+                carousel.addEventListener('scroll', function () {
+                    if (carousel.scrollLeft > 0) {
+                        arrowLeft.style.visibility = 'visible';
+                    } else {
+                        arrowLeft.style.visibility = 'hidden';
+                    }
+                    if (carousel.scrollLeft + carousel.offsetWidth >= carouselChild.offsetWidth) {
+                        arrowRight.style.visibility = 'hidden';
+                    }
+                })
+
+            };
+
+            function scrollLeft() {
+                var carousel = this.nextElementSibling;
+                var arrowRight = carousel.nextElementSibling;
+                var carouselChild = carousel.children[0];
+                var itemWidth = document.querySelector('.look__item').offsetWidth;
+                var distance = itemWidth + 16;
+                carousel.scrollBy(-distance, 0)
+
+                carousel.addEventListener('scroll', function () {
+                    if (carousel.scrollLeft + carousel.offsetWidth < carouselChild.offsetWidth) {
+                        arrowRight.style.visibility = 'visible';
+                    }
+                })
+
+
+            };
+
+            window.addEventListener('resize', function () {
+                let windowWidth = window.innerWidth;
+                if (windowWidth <= 764) {
+                    headerImg.setAttribute('src', 'images/header-img-mobile.jpg');
+                    footerImg1.setAttribute('src', 'images/finn-mobile.jpg');
+                    footerImg2.setAttribute('src', 'images/amber-mobile.jpg');
+                    clearInterval(scrollIntervalID);
+                } else {
+                    headerImg.setAttribute('src', 'images/header-img-desktop.jpg');
+                    footerImg1.setAttribute('src', 'images/finn-desktop.jpg');
+                    footerImg2.setAttribute('src', 'images/amber-desktop.jpg');
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
